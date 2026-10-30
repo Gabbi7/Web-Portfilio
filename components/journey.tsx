@@ -1,0 +1,3 @@
+import { journey } from '@/data/journey'
+import { SectionHeading } from './section-heading'
+export function Journey() { return <section id="journey" className="section container journey-section"><SectionHeading number="04" label="journey" /><div className="journey-grid"><h2>A log of<br /><span>the build.</span></h2><div className="timeline">{journey.map((item, index) => <div className="timeline-item" key={`${item.hash}-${index}`}><div className="commit"><i /><span>{item.hash}</span></div><div><strong>{item.year}</strong><h3>{item.title}</h3><p>{item.detail}</p></div></div>)}</div></div></section> }

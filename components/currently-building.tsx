@@ -1,0 +1,2 @@
+import { Terminal } from 'lucide-react'
+export function CurrentlyBuilding() { return <section className="currently-running container"><div className="running-heading"><span><Terminal /> currently.running()</span><i>● LIVE</i></div><div className="running-grid"><div><small>BUILDING</small><strong>Portfolio Website</strong></div><div><small>LEARNING</small><strong>Next.js · TypeScript · Backend Development</strong></div><div><small>STATUS</small><strong>████████░░ <em>80%</em></strong></div></div></section> }

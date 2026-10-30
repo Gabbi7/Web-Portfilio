@@ -1,0 +1,1 @@
+export function Footer() { return <footer className="footer container"><span className="footer-brand"><b>&gt;_</b> gavin.dev</span><span>Built with Next.js + TypeScript + Tailwind CSS</span><span>SYSTEM ONLINE <i /></span><span>© 2026 Gavin Ralph S. Rama</span></footer> }

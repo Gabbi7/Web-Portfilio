@@ -1,0 +1,1 @@
+export function SectionHeading({ number, label, prefix = true }: { number: string; label: string; prefix?: boolean }) { return <div className="section-heading"><span>{number} —</span><h2>{prefix ? './' : ''}{label}</h2><i aria-hidden="true" /></div> }
