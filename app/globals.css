@@ -37,11 +37,20 @@ section[id] { scroll-margin-top: 110px; }
 @page { size: A4; margin: 12mm; }
 @media print { body { background: white; } .resume-shell { padding: 0; } .resume-toolbar { display: none; } .resume-sheet { border: 0; max-width: none; padding: 0; font-size: 10pt; } .resume-sheet section { margin-top: 16px; } .resume-header h1 { font-size: 22pt; } .resume-sheet a { color: var(--text); } .portrait { box-shadow: none; } }
 
-/* BuildSphere's supplied web and mobile interfaces share the existing browser frame. */
+/* Supplied web and mobile interfaces share the existing browser frame. */
 .project-copy-left:nth-child(even) { grid-template-columns: .85fr 1.15fr; }
 .project-copy-left:nth-child(even) .project-copy { order: 0; }
-.project-case-notes { margin-top: 20px; }
-.project-case-notes .problem { margin: 12px 0; }
+.project-copy .project-full-title { margin-top: -4px; font-size: 11px; line-height: 1.6; color: var(--soft); }
+.project-copy .project-context { margin: 20px 0; color: var(--accent-strong); font: 10px/1.7 var(--font-geist-mono), monospace; }
+.project-context span { margin: 0 4px; color: var(--soft); }
+.project-contribution { margin-top: 24px; padding: 14px 16px; border: 1px solid var(--line); background: var(--surface); }
+.project-contribution > span, .project-detail-group > span { color: var(--accent-strong); font: 10px var(--font-geist-mono), monospace; }
+.project-contribution p { margin: 8px 0 0; font-size: 12px; }
+.project-detail-group { margin-top: 24px; }
+.project-detail-group .stack { margin: 12px 0 0; }
+.project-feature-list { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 12px; }
+.project-feature-list span { padding: 6px 8px; border: 1px solid var(--line); color: var(--muted); font: 9px/1.45 var(--font-geist-mono), monospace; }
+.project-image-pending { position: absolute; inset: 0; display: grid; place-items: center; padding: 20px; color: var(--muted); font: 11px var(--font-geist-mono), monospace; text-align: center; }
 .project-preview-media { min-width: 0; }
 .project-preview-dual .project-preview-media { display: grid; grid-template-columns: minmax(0, 1fr) 142px; align-items: start; gap: 14px; padding: 18px; }
 .project-web-preview, .project-mobile-preview { min-width: 0; margin: 0; }
