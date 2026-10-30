@@ -50,9 +50,10 @@ section[id] { scroll-margin-top: 110px; }
 .project-detail-group .stack { margin: 12px 0 0; }
 .project-feature-list { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 12px; }
 .project-feature-list span { padding: 6px 8px; border: 1px solid var(--line); color: var(--muted); font: 9px/1.45 var(--font-geist-mono), monospace; }
-.project-image-pending { position: absolute; inset: 0; display: grid; place-items: center; padding: 20px; color: var(--muted); font: 11px var(--font-geist-mono), monospace; text-align: center; }
 .project-preview-media { min-width: 0; }
 .project-preview-dual .project-preview-media { display: grid; grid-template-columns: minmax(0, 1fr) 142px; align-items: start; gap: 14px; padding: 18px; }
+.project-preview-mobile-only .project-preview-media { display: flex; justify-content: center; padding: 18px; }
+.project-preview-mobile-only .project-mobile-preview { width: min(260px, 100%); }
 .project-web-preview, .project-mobile-preview { min-width: 0; margin: 0; }
 .project-web-preview figcaption, .project-mobile-preview figcaption { margin-bottom: 10px; color: var(--accent-strong); font: 10px var(--font-geist-mono), monospace; letter-spacing: .08em; }
 .project-preview-dual .preview-image { min-height: 308px; margin: 0; background: var(--surface-2); }

@@ -25,13 +25,12 @@ export function ProjectShowcase({ project, index }: { project: Project; index: n
           {project.githubUrl && <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">GitHub <Code2 /></a>}
         </div>
       </div>
-      <div className={project.mobileImage ? 'project-preview project-preview-dual' : 'project-preview'}>
+      <div className={project.mobileImage && project.image ? 'project-preview project-preview-dual' : project.mobileImage ? 'project-preview project-preview-mobile-only' : 'project-preview'}>
         <div className="preview-top"><span><i /><i /><i /></span><span>preview / project-{project.number}</span></div>
         <div className="project-preview-media">
-          <figure className="project-web-preview">
+          {project.image && <figure className="project-web-preview">
             {project.mobileImage && <figcaption>WEB APP</figcaption>}
             <div className="preview-image">
-              {project.image ? (
                 <Image
                   src={project.image}
                   alt={`${project.title} web app screenshot`}
@@ -39,9 +38,8 @@ export function ProjectShowcase({ project, index }: { project: Project; index: n
                   sizes="(max-width: 800px) 100vw, 55vw"
                   style={{ objectFit: 'contain' }}
                 />
-              ) : <div className="project-image-pending">Web preview to be provided</div>}
             </div>
-          </figure>
+          </figure>}
           {project.mobileImage && (
             <figure className="project-mobile-preview">
               <figcaption>MOBILE APP</figcaption>
