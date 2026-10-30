@@ -6,10 +6,7 @@ export interface Project {
   fullTitle?: string
   context?: string
   role?: string
-  contribution?: string
-  teamStack?: string[]
-  features?: string[]
-  technologies: string[]
+  technologies?: string[]
   image?: string
   mobileImage?: string
   mobileImageSize?: { width: number; height: number }
@@ -30,11 +27,7 @@ export const projects: Project[] = [
     type: 'Mobile Application',
     context: 'FEU Institute of Technology Capstone Project',
     role: 'Team Member / Developer',
-    contribution: 'Contribution details to be added',
     description: 'HairLink is a mobile hair donation and wig management application developed as a team project for Strand Up for Cancer. It supports hair donation, wig management, recipient requests, and AR-assisted hairstyle visualization.',
-    teamStack: ['Python', 'Flutter', 'Google ML Kit Face Detection', 'MySQL', 'Firebase', 'Git', 'GitHub', 'Visual Studio Code'],
-    features: ['Hair Donation Submission & Tracking', 'Hair Verification', 'Inventory & Stock Management', 'Wig Production Monitoring', 'Wig–Recipient Matching', 'Recipient Request & Distribution Tracking', 'Reports', 'AR-Assisted Hairstyle Visualization', 'Community Support', 'Engagement & Notifications'],
-    technologies: [],
     mobileImage: '/hairlink-mobile-home.png',
     mobileImageSize: { width: 448, height: 792 },
     githubUrl: '',

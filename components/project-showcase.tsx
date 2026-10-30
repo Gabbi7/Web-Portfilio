@@ -11,15 +11,11 @@ export function ProjectShowcase({ project, index }: { project: Project; index: n
         {project.fullTitle && <p className="project-full-title">{project.fullTitle}</p>}
         {project.context && <p className="project-context">{project.context} <span>·</span> {project.role}</p>}
         <p>{project.description}</p>
-        {project.contribution && <div className="project-contribution"><span>MY CONTRIBUTION</span><p>{project.contribution}</p></div>}
-        {project.teamStack ? (
-          <div className="project-detail-group"><span>TEAM STACK</span><div className="stack">{project.teamStack.map((technology) => <span key={technology}>{technology}</span>)}</div></div>
-        ) : (
+        {project.technologies && (
           <div className="stack">{project.technologies.length > 0
             ? project.technologies.map((technology) => <span key={technology}>{technology}</span>)
             : <span className="project-tech-placeholder">Technologies: To be provided</span>}</div>
         )}
-        {project.features && <div className="project-detail-group"><span>PROJECT FEATURES</span><div className="project-feature-list">{project.features.map((feature) => <span key={feature}>{feature}</span>)}</div></div>}
         <div className="project-links">
           {project.liveUrl && <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">Live Demo <ExternalLink /></a>}
           {project.githubUrl && <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">GitHub <Code2 /></a>}
