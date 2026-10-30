@@ -4,12 +4,12 @@ import type { Project } from '@/data/projects'
 
 export function ProjectShowcase({ project, index }: { project: Project; index: number }) {
   return (
-    <article className={`project project-${index % 2 === 0 ? 'cyan' : 'blue'}`}>
+    <article className={`project project-${index % 2 === 0 ? 'cyan' : 'blue'} project-copy-left`}>
       <div className="project-copy">
-        <div className="project-meta"><span>PROJECT_{project.number}</span><span>{project.status}</span></div>
+        <div className="project-meta"><span>PROJECT_{project.number}</span><span>{project.type ?? project.status}</span></div>
         <h3>{project.title}</h3>
         <p>{project.description}</p>
-        {project.mobileImage && (
+        {project.problem && project.solution && (
           <div className="project-case-notes">
             <p className="problem"><span>THE PROBLEM</span>{project.problem}</p>
             <p className="problem"><span>THE SOLUTION</span>{project.solution}</p>
@@ -36,7 +36,7 @@ export function ProjectShowcase({ project, index }: { project: Project; index: n
                 alt={`${project.title} web app screenshot`}
                 fill
                 sizes="(max-width: 800px) 100vw, 55vw"
-                style={{ objectFit: project.image === '/construction-dashboard.png' ? 'contain' : 'cover' }}
+                style={{ objectFit: 'contain' }}
               />
             </div>
           </figure>

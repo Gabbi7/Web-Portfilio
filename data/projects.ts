@@ -2,8 +2,9 @@ export interface Project {
   number: string
   title: string
   description: string
-  problem: string
-  solution: string
+  problem?: string
+  solution?: string
+  type?: string
   technologies: string[]
   image: string
   mobileImage?: string
@@ -15,7 +16,6 @@ export interface Project {
 
 // Replace these clearly marked records with Gavin's real projects.
 export const projects: Project[] = [
-  { number: '01', title: 'BuildSphere', description: 'BuildSphere is a web and mobile project management platform designed to help construction teams manage projects, track progress, and organize project information in one place.', problem: 'Managing construction projects can involve multiple tasks, updates, and pieces of information that need to stay organized.', solution: 'BuildSphere provides a centralized experience for organizing project information, monitoring progress, and keeping important project activities in one place across web and mobile.', technologies: [], image: '/construction-dashboard.png', mobileImage: '/buildsphere-mobile-home.png', githubUrl: '', liveUrl: 'https://buildsphere.cityscapebuildersinc.com/login', year: 'TBD', status: 'LIVE' },
-  { number: '02', title: 'Project placeholder', description: 'Add a short description of a real project here.', problem: 'What problem did this project solve?', solution: 'How did the project solve it?', technologies: ['TECHNOLOGIES_TBD'], image: '/project-placeholder.svg', githubUrl: '', liveUrl: '', year: 'YEAR_TBD', status: 'DRAFT' },
-  { number: '03', title: 'Project placeholder', description: 'Add a short description of a real project here.', problem: 'What problem did this project solve?', solution: 'How did the project solve it?', technologies: ['TECHNOLOGIES_TBD'], image: '/project-placeholder.svg', githubUrl: '', liveUrl: '', year: 'YEAR_TBD', status: 'DRAFT' },
+  { number: '01', title: 'BuildSphere', description: 'BuildSphere is a web and mobile project management platform designed to help construction teams manage projects, track progress, and organize project information in one place.', technologies: [], image: '/construction-dashboard.png', mobileImage: '/buildsphere-mobile-home.png', githubUrl: '', liveUrl: 'https://buildsphere.cityscapebuildersinc.com/login', year: 'TBD', status: 'LIVE' },
+  { number: '02', title: 'CoCoir PH', type: 'E-Commerce / Web Application', description: 'CoCoir PH is a modern e-commerce website focused on showcasing and selling natural coconut coir products for construction, gardening, and everyday use.', problem: 'Customers need a simple way to discover, explore, and purchase sustainable coconut coir products online.', solution: 'CoCoir PH provides a focused online shopping experience where customers can browse products, learn about their uses, and access the store from a modern web interface.', technologies: [], image: '/cocoir-ph-home.png', githubUrl: '', liveUrl: '', year: 'TBD', status: 'LIVE' },
 ]
